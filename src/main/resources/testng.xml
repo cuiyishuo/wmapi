@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="万门api测试套件">
+    <test name="api测试用例">
+        <classes>
+            <class name="com.wanmen.cases.users.LoginTest">
+                <methods>
+                    <include name="loginTrue"/>
+                    <include name="loginFalse"/>
+                </methods>
+            </class>
+            <class name="com.wanmen.cases.users.FavoriteTest">
+                <methods>
+                    <include name="share"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!--  测试报告监听器  -->
+    <listeners>
+        <listener class-name="com.wanmen.config.ExtentTestNGIReporterListener"/>
+    </listeners>
+</suite>

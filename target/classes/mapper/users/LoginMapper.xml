@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 命名空间mapper,如果有多个mapper文件，这个必须唯一 -->
+<mapper namespace="com.wanmen.mappers.users.LoginMapper">
+    <!-- 定义表字段 -->
+    <sql id="signin"> id,case_name,account,password,is_del,expected </sql>
+    <!--  定义返回类型  -->
+    <resultMap id="signinMap" type="com.wanmen.model.users.LoginCase">
+        <result property="id" column="id"/>
+        <result property="caseName" column="case_name"/>
+        <result property="account" column="account"/>
+        <result property="password" column="password"/>
+        <result property="expected" column="expected"/>
+        <result property="isDel" column="is_del"/>
+    </resultMap>
+
+    <select id="findLoginCases" parameterType="java.lang.String" resultMap="signinMap">
+        select
+        <include refid="signin"/>
+        from signin_case
+        where scenes=#{0}
+    </select>
+</mapper>

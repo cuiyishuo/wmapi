@@ -1,0 +1,17 @@
+/Users/cuiyishuo/IdeaProjects/wmapi/src/main/java/com/wanmen/model/users/LoginCase.java
+/Users/cuiyishuo/IdeaProjects/wmapi/src/main/java/com/wanmen/cases/users/LoginTest.java
+/Users/cuiyishuo/IdeaProjects/wmapi/src/main/java/com/wanmen/util/DataBaseUtil.java
+/Users/cuiyishuo/IdeaProjects/wmapi/src/main/java/com/wanmen/config/TestConfig.java
+/Users/cuiyishuo/IdeaProjects/wmapi/src/main/java/com/wanmen/mappers/users/LoginMapper.java
+/Users/cuiyishuo/IdeaProjects/wmapi/src/main/java/com/wanmen/util/ConfigFile.java
+/Users/cuiyishuo/IdeaProjects/wmapi/src/main/java/com/wanmen/cases/Prepare.java
+/Users/cuiyishuo/IdeaProjects/wmapi/src/main/java/com/wanmen/util/JSONPathMi.java
+/Users/cuiyishuo/IdeaProjects/wmapi/src/main/java/com/wanmen/datas/users/CaseDataProvider.java
+/Users/cuiyishuo/IdeaProjects/wmapi/src/main/java/com/wanmen/mappers/BaseMapper.java
+/Users/cuiyishuo/IdeaProjects/wmapi/src/main/java/com/wanmen/model/ResponseModel.java
+/Users/cuiyishuo/IdeaProjects/wmapi/src/main/java/com/wanmen/cases/users/FavoriteTest.java
+/Users/cuiyishuo/IdeaProjects/wmapi/src/main/java/com/wanmen/config/ExtentTestNGIReporterListener.java
+/Users/cuiyishuo/IdeaProjects/wmapi/src/main/java/com/wanmen/model/BaseCase.java
+/Users/cuiyishuo/IdeaProjects/wmapi/src/main/java/com/wanmen/util/DateUtil.java
+/Users/cuiyishuo/IdeaProjects/wmapi/src/main/java/com/wanmen/datas/SharedData.java
+/Users/cuiyishuo/IdeaProjects/wmapi/src/main/java/com/wanmen/util/ConvertResponse.java

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [万门api测试套件]">
+  <listeners>
+    <listener class-name="com.wanmen.config.ExtentTestNGIReporterListener"/>
+  </listeners>
+  <test name="api测试用例(failed)">
+    <classes>
+      <class name="com.wanmen.cases.users.FavoriteTest">
+        <methods>
+          <include name="share" invocation-numbers="1"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.wanmen.cases.users.FavoriteTest -->
+      <class name="com.wanmen.cases.users.LoginTest">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.wanmen.cases.users.LoginTest -->
+    </classes>
+  </test> <!-- api测试用例(failed) -->
+</suite> <!-- Failed suite [万门api测试套件] -->
