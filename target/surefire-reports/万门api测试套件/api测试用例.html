@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>api测试用例</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/4/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Aug 04 10:19:35 CST 2020</td>
+<td>Started on:</td><td>Mon Aug 17 12:19:54 CST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>2 seconds (2955 ms)</td>
+<tr><td>Total time:</td><td>5 seconds (5118 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,22 +75,132 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.wanmen.cases.users.FavoriteTest.share()'><b>share</b><br>Test class: com.wanmen.cases.users.FavoriteTest<br>Test method: 获取用户收藏<br>Parameters: BaseCase(id=0, caseName=有收藏记录-5条, expected={"size":"5"}, api=null, scenes=null, account=favapi2@163.com, password=1111aaaa, isDel=0)</td>
-<td><div><pre>java.lang.AssertionError: expected [5] but found [0]
-	at com.wanmen.cases.users.FavoriteTest.share(FavoriteTest.java:61)
+<td title='com.wanmen.cases.users.LoginTest.loginTrue()'><b>loginTrue</b><br>Test class: com.wanmen.cases.users.LoginTest<br>Test method: 输入正确的账号密码<br>Parameters: LoginCase(account=wmapi@163.com , password=1111aaaa)</td>
+<td><div><pre>java.lang.AssertionError: 找不到该属性:[id]
+	at com.wanmen.util.JSONPathMi.eval(JSONPathMi.java:21)
+	at com.wanmen.cases.users.LoginTest.loginTrue(LoginTest.java:49)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1676827075", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1676827075'><pre>java.lang.AssertionError: 找不到该属性:[id]
+	at com.wanmen.util.JSONPathMi.eval(JSONPathMi.java:21)
+	at com.wanmen.cases.users.LoginTest.loginTrue(LoginTest.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:281)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:121)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+</pre></div></td>
+<td>1</td>
+<td>com.wanmen.cases.users.LoginTest@3d24753a</td></tr>
+<tr>
+<td title='com.wanmen.cases.users.LoginTest.loginTrue()'><b>loginTrue</b><br>Test class: com.wanmen.cases.users.LoginTest<br>Test method: 输入正确的账号密码<br>Parameters: LoginCase(account=13910428660, password=1111aaaa)</td>
+<td><div><pre>java.lang.AssertionError: 找不到该属性:[id]
+	at com.wanmen.util.JSONPathMi.eval(JSONPathMi.java:21)
+	at com.wanmen.cases.users.LoginTest.loginTrue(LoginTest.java:49)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1611370719", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1611370719'><pre>java.lang.AssertionError: 找不到该属性:[id]
+	at com.wanmen.util.JSONPathMi.eval(JSONPathMi.java:21)
+	at com.wanmen.cases.users.LoginTest.loginTrue(LoginTest.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:281)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:121)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+</pre></div></td>
+<td>0</td>
+<td>com.wanmen.cases.users.LoginTest@3d24753a</td></tr>
+<tr>
+<td title='com.wanmen.cases.users.FavoriteTest.share()'><b>share</b><br>Test class: com.wanmen.cases.users.FavoriteTest<br>Test method: 获取用户收藏<br>Parameters: BaseCase(id=0, caseName=无收藏记录, expected={"size":"0"}, api=null, scenes=null, account=favapi1@163.com, password=1111aaaa, isDel=0)</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.wanmen.cases.Prepare.getAuthorization(Prepare.java:42)
+	at com.wanmen.cases.users.FavoriteTest.getResult(FavoriteTest.java:67)
+	at com.wanmen.cases.users.FavoriteTest.share(FavoriteTest.java:54)
 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1825419935", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1825419935'><pre>java.lang.AssertionError: expected [5] but found [0]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:179)
-	at com.wanmen.cases.users.FavoriteTest.share(FavoriteTest.java:61)
+... Removed 7 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace6422064", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace6422064'><pre>java.lang.NullPointerException
+	at com.wanmen.cases.Prepare.getAuthorization(Prepare.java:42)
+	at com.wanmen.cases.users.FavoriteTest.getResult(FavoriteTest.java:67)
+	at com.wanmen.cases.users.FavoriteTest.share(FavoriteTest.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>0</td>
+<td>com.wanmen.cases.users.FavoriteTest@7e0ea639</td></tr>
+<tr>
+<td title='com.wanmen.cases.users.FavoriteTest.share()'><b>share</b><br>Test class: com.wanmen.cases.users.FavoriteTest<br>Test method: 获取用户收藏<br>Parameters: BaseCase(id=0, caseName=有收藏记录-5条, expected={"size":"5"}, api=null, scenes=null, account=favapi2@163.com, password=1111aaaa, isDel=0)</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.wanmen.cases.Prepare.getAuthorization(Prepare.java:42)
+	at com.wanmen.cases.users.FavoriteTest.getResult(FavoriteTest.java:67)
+	at com.wanmen.cases.users.FavoriteTest.share(FavoriteTest.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 7 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1825419935", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1825419935'><pre>java.lang.NullPointerException
+	at com.wanmen.cases.Prepare.getAuthorization(Prepare.java:42)
+	at com.wanmen.cases.users.FavoriteTest.getResult(FavoriteTest.java:67)
+	at com.wanmen.cases.users.FavoriteTest.share(FavoriteTest.java:54)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -129,21 +239,6 @@ function toggleAllBoxes() {
 <td></td>
 <td>0</td>
 <td>com.wanmen.cases.users.LoginTest@3d24753a</td></tr>
-<tr>
-<td title='com.wanmen.cases.users.LoginTest.loginTrue()'><b>loginTrue</b><br>Test class: com.wanmen.cases.users.LoginTest<br>Test method: 输入正确的账号密码<br>Parameters: LoginCase(account=wmapi@163.com , password=1111aaaa)</td>
-<td></td>
-<td>0</td>
-<td>com.wanmen.cases.users.LoginTest@3d24753a</td></tr>
-<tr>
-<td title='com.wanmen.cases.users.LoginTest.loginTrue()'><b>loginTrue</b><br>Test class: com.wanmen.cases.users.LoginTest<br>Test method: 输入正确的账号密码<br>Parameters: LoginCase(account=13910428660, password=1111aaaa)</td>
-<td></td>
-<td>0</td>
-<td>com.wanmen.cases.users.LoginTest@3d24753a</td></tr>
-<tr>
-<td title='com.wanmen.cases.users.FavoriteTest.share()'><b>share</b><br>Test class: com.wanmen.cases.users.FavoriteTest<br>Test method: 获取用户收藏<br>Parameters: BaseCase(id=0, caseName=无收藏记录, expected={"size":"0"}, api=null, scenes=null, account=favapi1@163.com, password=1111aaaa, isDel=0)</td>
-<td></td>
-<td>0</td>
-<td>com.wanmen.cases.users.FavoriteTest@7e0ea639</td></tr>
 </table><p>
 </body>
 </html>

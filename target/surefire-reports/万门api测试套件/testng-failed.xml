@@ -8,7 +8,7 @@
     <classes>
       <class name="com.wanmen.cases.users.FavoriteTest">
         <methods>
-          <include name="share" invocation-numbers="1"/>
+          <include name="share" invocation-numbers="0 1"/>
           <include name="beforeClass"/>
         </methods>
       </class> <!-- com.wanmen.cases.users.FavoriteTest -->
@@ -16,6 +16,7 @@
         <methods>
           <include name="beforeTest"/>
           <include name="afterTest"/>
+          <include name="loginTrue" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- com.wanmen.cases.users.LoginTest -->
     </classes>

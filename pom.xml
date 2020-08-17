@@ -86,8 +86,9 @@
                 <configuration>
                     <!--配置testng.xml文件的路径-->
                     <suiteXmlFiles>
+                        <!--suppress UnresolvedMavenProperty -->
                         <suiteXmlFile>
-                            ./src/main/resources/testng.xml
+                            ./src/main/resources/${xmlFileName}
                         </suiteXmlFile>
                     </suiteXmlFiles>
                     <!--编译时忽略测试失败用例-->

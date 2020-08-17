@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="3.816" tests="7" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="6.103" tests="7" errors="0" skipped="0" failures="4">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="xmlFileName" value="testng.xml"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib"/>
     <property name="java.vm.version" value="25.181-b13"/>
     <property name="gopherProxySet" value="false"/>
@@ -44,7 +45,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean package"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test -DxmlFileName=testng.xml"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="zh"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -60,17 +61,39 @@
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="loginTrue" classname="com.wanmen.cases.users.LoginTest" time="0.688"/>
-  <testcase name="loginTrue" classname="com.wanmen.cases.users.LoginTest" time="0.26"/>
-  <testcase name="loginFalse" classname="com.wanmen.cases.users.LoginTest" time="0.024"/>
-  <testcase name="loginFalse" classname="com.wanmen.cases.users.LoginTest" time="0.023"/>
-  <testcase name="loginFalse" classname="com.wanmen.cases.users.LoginTest" time="0.024"/>
-  <testcase name="share" classname="com.wanmen.cases.users.FavoriteTest" time="0.27"/>
-  <testcase name="share" classname="com.wanmen.cases.users.FavoriteTest" time="0.312">
-    <failure message="expected [5] but found [0]" type="java.lang.AssertionError">java.lang.AssertionError: expected [5] but found [0]
-	at com.wanmen.cases.users.FavoriteTest.share(FavoriteTest.java:61)
+  <testcase name="loginTrue" classname="com.wanmen.cases.users.LoginTest" time="1.834">
+    <failure message="找不到该属性:[id]" type="java.lang.AssertionError">java.lang.AssertionError: 找不到该属性:[id]
+	at com.wanmen.cases.users.LoginTest.loginTrue(LoginTest.java:49)
 </failure>
-    <system-out><![CDATA[Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmMTZjOGZlZDk3Y2MyMDAwMTM4YjUwYSIsImlhdCI6MTU5NjUwNzU3NywiZXhwIjoxNTk5MDk5NTc3LCJpc3MiOiJ1cm46YXBpIn0.v2XSmP-42M7srcf9hZLnnTWnrQx0_gOKxusFB8oTLDo
+    <system-out><![CDATA[[TestNGContentHandler] [WARN] It is strongly recommended to add "<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >" at the top of your file, otherwise TestNG may fail or not work as expected.
+loginTrue的case:[[Lcom.wanmen.model.users.LoginCase;@49c90a9c
 ]]></system-out>
+    <system-err><![CDATA[Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+执行用例：【输入正确的邮箱账号密码】
+]]></system-err>
+  </testcase>
+  <testcase name="loginTrue" classname="com.wanmen.cases.users.LoginTest" time="0.347">
+    <failure message="找不到该属性:[id]" type="java.lang.AssertionError">java.lang.AssertionError: 找不到该属性:[id]
+	at com.wanmen.cases.users.LoginTest.loginTrue(LoginTest.java:49)
+</failure>
+    <system-err><![CDATA[执行用例：【输入正确的手机账号密码】
+]]></system-err>
+  </testcase>
+  <testcase name="loginFalse" classname="com.wanmen.cases.users.LoginTest" time="0.02"/>
+  <testcase name="loginFalse" classname="com.wanmen.cases.users.LoginTest" time="0.02"/>
+  <testcase name="loginFalse" classname="com.wanmen.cases.users.LoginTest" time="0.022"/>
+  <testcase name="share" classname="com.wanmen.cases.users.FavoriteTest" time="0.048">
+    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.wanmen.cases.users.FavoriteTest.getResult(FavoriteTest.java:67)
+	at com.wanmen.cases.users.FavoriteTest.share(FavoriteTest.java:54)
+</failure>
+    <system-out><![CDATA[share的case:[[Lcom.wanmen.model.BaseCase;@632ceb35
+]]></system-out>
+  </testcase>
+  <testcase name="share" classname="com.wanmen.cases.users.FavoriteTest" time="0.455">
+    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.wanmen.cases.users.FavoriteTest.getResult(FavoriteTest.java:67)
+	at com.wanmen.cases.users.FavoriteTest.share(FavoriteTest.java:54)
+</failure>
   </testcase>
 </testsuite>
