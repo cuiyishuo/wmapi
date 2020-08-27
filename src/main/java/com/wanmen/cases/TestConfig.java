@@ -1,4 +1,4 @@
-package com.wanmen.config;
+package com.wanmen.cases;
 
 import lombok.Data;
 import org.apache.http.client.CookieStore;

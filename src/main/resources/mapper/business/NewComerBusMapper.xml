@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 命名空间mapper,如果有多个mapper文件，这个必须唯一 -->
+<mapper namespace="com.wanmen.mappers.business.NewComerBusMapper">
+    <!-- 定义表字段 -->
+    <sql id="base"> b.case_name,b.expected,b.interface,b.course_ids,u.account,u.password</sql>
+    <!--  定义返回类型  -->
+    <resultMap id="newComerBusMap" type="com.wanmen.model.business.NewComerBusCase">
+        <result property="id" column="id"/>
+        <result property="caseName" column="case_name"/>
+        <result property="expected" column="expected"/>
+        <result property="isDel" column="is_del"/>
+        <association property="loginCase" javaType="com.wanmen.model.users.LoginCase">
+            <result property="account" column="accountA"/>
+            <result property="password" column="passwordA"/>
+        </association>
+        <association property="newComerCase" javaType="com.wanmen.model.reward.NewComerCase">
+            <result property="courseIds" column="course_idsA"/>
+        </association>
+    </resultMap>
+
+    <select id="findNewComerBusCases" parameterType="java.lang.String" resultMap="newComerBusMap">
+        select b.case_name,b.expected,b.scenes,s.account as accountA,s.`password` as passwordA,n.course_ids as course_idsA from business b
+        join signin_case s
+        on b.login_case_id = s.id
+        join newcomer n
+        on b.newcomer_case_id = n.id
+        where b.scenes='newcomer_bus'
+    </select>
+</mapper>

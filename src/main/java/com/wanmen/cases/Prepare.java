@@ -1,8 +1,9 @@
 package com.wanmen.cases;
 
 import com.alibaba.fastjson.JSONObject;
-import com.wanmen.config.TestConfig;
+import com.wanmen.mappers.DataBaseInit;
 import com.wanmen.util.ConfigFile;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
@@ -13,6 +14,7 @@ import java.io.IOException;
  * @author sol
  * @create 2020-06-30  10:52 上午
  */
+@Slf4j
 public class Prepare {
 
     /**
@@ -39,9 +41,13 @@ public class Prepare {
         String result;
         // 执行post方法
         CloseableHttpResponse response = TestConfig.httpclient.execute (post);
-        authorization = response.getFirstHeader ("Authorization").getValue ();
+        try {
+            authorization = response.getFirstHeader ("Authorization").getValue ();
+        } catch (NullPointerException e) {
+            throw new NullPointerException ("登录失败，获取登录token异常");
+        }
         //关闭结果集
-        response.getEntity().getContent().close();
+        response.getEntity ().getContent ().close ();
         return authorization;
 
 

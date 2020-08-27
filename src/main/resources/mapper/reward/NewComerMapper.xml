@@ -2,23 +2,26 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- 命名空间mapper,如果有多个mapper文件，这个必须唯一 -->
-<mapper namespace="com.wanmen.mappers.BaseMapper">
+<mapper namespace="com.wanmen.mappers.reward.NewComerMapper">
     <!-- 定义表字段 -->
-    <sql id="base"> b.case_name,b.expected,u.account,u.password</sql>
+    <sql id="base"> b.case_name,b.expected,b.interface,b.course_ids,u.account,u.password</sql>
     <!--  定义返回类型  -->
-    <resultMap id="baseMap" type="com.wanmen.model.BaseCase">
+    <resultMap id="newComerMap" type="com.wanmen.model.reward.NewComerCase">
         <result property="id" column="id"/>
+        <result property="interfaces" column="interface"/>
         <result property="caseName" column="case_name"/>
         <result property="expected" column="expected"/>
         <result property="account" column="account"/>
         <result property="password" column="password"/>
         <result property="isDel" column="is_del"/>
+        <result property="courseIds" column="course_ids"/>
+<!--        <result property="courseIds" column="course_ids"  typeHandler="com.wanmen.handeler.StringAndListHandler"/>-->
     </resultMap>
 
-    <select id="findBaseCases" parameterType="java.lang.String" resultMap="baseMap">
+    <select id="findNewComerCases" parameterType="java.lang.String" resultMap="newComerMap">
         select
         <include refid="base"/>
-        from base_case b
+        from newcomer b
         left join users u
         on b.user_id = u.id
         where scenes=#{0}

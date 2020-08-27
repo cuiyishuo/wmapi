@@ -22,7 +22,9 @@
     <mappers>
         <!-- 扫描路径下的mapper映射文件 -->
         <mapper resource="mapper/users/LoginMapper.xml"/>
-        <mapper resource="mapper/BaseMapper.xml"/>
+        <mapper resource="mapper/content/BaseMapper.xml"/>
+        <mapper resource="mapper/reward/NewComerMapper.xml"/>
+        <mapper resource="mapper/business/NewComerBusMapper.xml"/>
         <!-- 扫描包下的接口文件 -->
 <!--        <package name="com.wanmen.model.mapper" />-->
     </mappers>

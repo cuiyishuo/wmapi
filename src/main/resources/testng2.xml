@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="万门api测试套件">
+    <test name="api测试用例">
+        <classes>
+            <class name="com.wanmen.cases.business.NewComerBusTest">
+                <methods>
+                    <include name="getSuccessBus"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!--  ExtentReport测试报告监听器  -->
+    <listeners>
+        <listener class-name="com.wanmen.report.ExtentTestNGIReporterListener"/>
+    </listeners>
+</suite>

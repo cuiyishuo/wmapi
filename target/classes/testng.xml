@@ -13,10 +13,15 @@
                     <include name="share"/>
                 </methods>
             </class>
+            <class name="com.wanmen.cases.reward.NewComerTest">
+                <methods>
+                    <include name="newComer2"/>
+                </methods>
+            </class>
         </classes>
     </test>
-    <!--  测试报告监听器  -->
+    <!--  ExtentReport测试报告监听器  -->
     <listeners>
-        <listener class-name="com.wanmen.config.ExtentTestNGIReporterListener"/>
+        <listener class-name="com.wanmen.report.ExtentTestNGIReporterListener"/>
     </listeners>
 </suite>

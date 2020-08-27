@@ -1,4 +1,4 @@
-package com.wanmen.config;
+package com.wanmen.report;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -95,9 +95,9 @@ public class ExtentTestNGIReporterListener implements IReporter {
             }
 
         }
-//        for (String s : Reporter.getOutput()) {
-//            extent.setTestRunnerOutput(s);
-//        }
+        for (String s : Reporter.getOutput()) {
+            extent.setTestRunnerOutput(s);
+        }
 
         extent.flush();
     }

@@ -1,15 +1,15 @@
-package com.wanmen.model.users;
+package com.wanmen.model.reward;
 
 import lombok.Data;
 
+import java.util.List;
+
 /**
- * 登录接口用例
- *
  * @author sol
- * @create 2020-06-30  12:22 下午
+ * @create 2020-08-20  11:00 下午
  */
 @Data
-public class LoginCase{
+public class NewComerCase {
     private int id;
     private String caseName;
     private String expected;
@@ -17,5 +17,7 @@ public class LoginCase{
     private String scenes;
     private String account;
     private String password;
+    private String interfaces;
     private int isDel;
+    private String courseIds;
 }

@@ -18,7 +18,7 @@ public class JSONPathMi {
         } catch (NullPointerException e) {
             int index = path.lastIndexOf (".");
             String properties = path.substring (index + 1);
-            throw new AssertionError ("找不到该属性:[" + properties + "]");
+            throw new AssertionError ("JSON解析异常，找不到该属性:[" + properties + "],解析的jsonPath：" + path + "，实际返回结果：" + collectionObj.toString ());
         }
         return jsonStr;
     }

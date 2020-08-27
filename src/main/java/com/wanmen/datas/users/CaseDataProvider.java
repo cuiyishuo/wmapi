@@ -1,14 +1,14 @@
 package com.wanmen.datas.users;
 
-import com.wanmen.mappers.BaseMapper;
+import com.wanmen.mappers.content.BaseMapper;
 import com.wanmen.mappers.users.LoginMapper;
-import com.wanmen.model.BaseCase;
+import com.wanmen.model.content.BaseCase;
 import com.wanmen.model.users.LoginCase;
-import com.wanmen.util.DataBaseUtil;
+import com.wanmen.mappers.DataBaseInit;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.session.SqlSession;
 import org.testng.annotations.DataProvider;
 
-import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +19,7 @@ import java.util.List;
  * @author sol
  * @create 2020-07-01  5:29 下午
  */
+@Slf4j
 public class CaseDataProvider {
 
     @DataProvider(name = "baseProvider")
@@ -26,7 +27,7 @@ public class CaseDataProvider {
         BaseCase[][] data;
         List<BaseCase> cases = new ArrayList<> ();
         try {
-            SqlSession session = DataBaseUtil.getSqlSession ();
+            SqlSession session = DataBaseInit.getSqlSession ();
             BaseMapper baseMapper = session.getMapper (BaseMapper.class);
             if (method.getName ().equals ("share")) {
                 cases = baseMapper.findBaseCases ("vertify_size");
@@ -40,9 +41,9 @@ public class CaseDataProvider {
             }
             System.out.println (method.getName () + "的case:" + data);
             return data;
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace ();
-            System.err.println ("获取数据驱动异常");
+            log.error ("数据驱动构造失败");
             return null;
         }
     }
@@ -52,7 +53,7 @@ public class CaseDataProvider {
         LoginCase[][] data;
         List<LoginCase> cases = new ArrayList<> ();
         try {
-            SqlSession session = DataBaseUtil.getSqlSession ();
+            SqlSession session = DataBaseInit.getSqlSession ();
             LoginMapper loginMapper = session.getMapper (LoginMapper.class);
             if (method.getName ().equals ("loginTrue")) {
                 cases = loginMapper.findLoginCases ("login_success");
@@ -68,9 +69,9 @@ public class CaseDataProvider {
             }
             System.out.println (method.getName () + "的case:" + data);
             return data;
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace ();
-            System.err.println ("获取数据驱动异常");
+            log.error ("数据驱动构造失败");
             return null;
         }
     }

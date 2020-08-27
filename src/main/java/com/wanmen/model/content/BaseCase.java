@@ -1,4 +1,4 @@
-package com.wanmen.model;
+package com.wanmen.model.content;
 
 import lombok.Data;
 

@@ -1,6 +1,6 @@
-package com.wanmen.mappers;
+package com.wanmen.mappers.content;
 
-import com.wanmen.model.BaseCase;
+import com.wanmen.model.content.BaseCase;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

@@ -2,11 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- 命名空间mapper,如果有多个mapper文件，这个必须唯一 -->
-<mapper namespace="com.wanmen.mappers.BaseMapper">
+<mapper namespace="com.wanmen.mappers.content.BaseMapper">
     <!-- 定义表字段 -->
     <sql id="base"> b.case_name,b.expected,u.account,u.password</sql>
     <!--  定义返回类型  -->
-    <resultMap id="baseMap" type="com.wanmen.model.BaseCase">
+    <resultMap id="baseMap" type="com.wanmen.model.content.BaseCase">
         <result property="id" column="id"/>
         <result property="caseName" column="case_name"/>
         <result property="expected" column="expected"/>

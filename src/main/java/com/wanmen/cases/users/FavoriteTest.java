@@ -1,32 +1,27 @@
 package com.wanmen.cases.users;
 
-import com.alibaba.fastjson.JSONObject;
 import com.wanmen.cases.Prepare;
-import com.wanmen.config.TestConfig;
+import com.wanmen.cases.TestConfig;
 import com.wanmen.datas.SharedData;
 import com.wanmen.datas.users.CaseDataProvider;
-import com.wanmen.mappers.BaseMapper;
-import com.wanmen.mappers.users.LoginMapper;
-import com.wanmen.model.BaseCase;
+import com.wanmen.model.content.BaseCase;
 import com.wanmen.model.ResponseModel;
-import com.wanmen.model.users.LoginCase;
 import com.wanmen.util.ConfigFile;
 import com.wanmen.util.ConvertResponse;
-import com.wanmen.util.DataBaseUtil;
+import com.wanmen.mappers.DataBaseInit;
 import com.wanmen.util.JSONPathMi;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.apache.ibatis.session.SqlSession;
-import org.jsoup.Connection;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Map;
 
@@ -36,15 +31,20 @@ import java.util.Map;
  * @author sol
  * @create 2020-07-02  10:54 下午
  */
-@Listeners()
 public class FavoriteTest {
     String requestUrl;
     SqlSession session;
 
-    @BeforeTest(description = "测试准备工作,获取HttpClient对象")
+    /*@BeforeClass(description = "测试准备工作,获取HttpClient对象")
     public void beforeClass() throws IOException {
         TestConfig.httpclient = HttpClients.createDefault ();
-        session = DataBaseUtil.getSqlSession ();
+        session = DataBaseInit.getSqlSession ();
+        requestUrl = ConfigFile.getAddress ("/me/courses/fav");
+    }*/
+
+    public FavoriteTest() throws IOException{
+        TestConfig.httpclient = HttpClients.createDefault ();
+        session = DataBaseInit.getSqlSession ();
         requestUrl = ConfigFile.getAddress ("/me/courses/fav");
     }
 
@@ -61,11 +61,15 @@ public class FavoriteTest {
         Assert.assertEquals (favSize, expectedFavSize);
     }
 
-    private ResponseModel getResult(String account, String password) throws IOException {
+    public ResponseModel getResult(String account, String password) throws IOException {
         ResponseModel responseModel = new ResponseModel ();
         // 获取登录token
         SharedData.authorization = Prepare.getAuthorization (account, password);
+        // 构造出：https://beta-www.wanmen.org/me/courses/fav?wd=java&wd2=py
         System.out.println (SharedData.authorization);
+        /*URI uri = new URIBuilder (requestUrl)
+                .setParameter("wd", "java")
+                .setParameter ("wd2", "py").build();*/
         //下边的代码为写完接口的测试代码
         HttpGet httpGet = new HttpGet (requestUrl);
         //设置请求头信息 设置header
